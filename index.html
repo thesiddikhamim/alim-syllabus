@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আলিম কেন্দ্রীয় পরীক্ষা ২০২৬ — চূড়ান্ত সাজেশন্স</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+<style>
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --border: #e8e2d9;
+    --border-subtle: #f0ece6;
+    --text-primary: #1a1612;
+    --text-secondary: #6b6159;
+    --text-muted: #9e968e;
+    --accent: #8b6914;
+    --accent-light: #f5edd8;
+    --accent-hover: #6d5010;
+    --tag-bg: #f0ece6;
+    --radius: 8px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Noto Serif Bengali', serif;
+    min-height: 100vh;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+
+  .header-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-family: sans-serif;
+  }
+
+  /* SEARCH BAR */
+  .search-wrap {
+    max-width: 600px;
+    margin: 32px auto 0;
+    position: relative;
+  }
+
+  .search-wrap input {
+    width: 100%;
+    padding: 12px 44px 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    font-size: 14px;
+    font-family: 'Noto Serif Bengali', serif;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-wrap input:focus {
+    border-color: var(--accent);
+  }
+
+  .search-wrap input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+  }
+
+  /* STATS ROW */
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 20px 24px;
+    background: var(--accent-light);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent);
+    font-family: 'Playfair Display', serif;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: sans-serif;
+  }
+
+  /* MAIN */
+  main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  /* SUBJECT CARD */
+  .subject-group {
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .subject-group:hover {
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+
+  .subject-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    cursor: pointer;
+    user-select: none;
+    gap: 16px;
+  }
+
+  .subject-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .subject-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: sans-serif;
+  }
+
+  .subject-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .subject-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: sans-serif;
+    margin-top: 2px;
+  }
+
+  .subject-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .topic-count {
+    font-size: 11px;
+    color: var(--text-muted);
+    background: var(--tag-bg);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-family: sans-serif;
+  }
+
+  .chevron {
+    color: var(--text-muted);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  .subject-group.open .chevron {
+    transform: rotate(180deg);
+  }
+
+  /* SUBJECT BODY */
+  .subject-body {
+    display: none;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .subject-group.open .subject-body {
+    display: block;
+  }
+
+  /* SECTION INSIDE SUBJECT */
+  .section {
+    padding: 20px 22px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-family: sans-serif;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-title::before {
+    content: '';
+    width: 3px;
+    height: 13px;
+    background: var(--accent);
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  /* ITEMS */
+  .item-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .item-list li {
+    font-size: 14px;
+    color: var(--text-primary);
+    padding: 8px 12px;
+    background: var(--bg);
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: border-color 0.15s, background 0.15s;
+    line-height: 1.6;
+  }
+
+  .item-list li:hover {
+    border-color: var(--border);
+    background: var(--accent-light);
+  }
+
+  /* Arabic text */
+  .arabic {
+    font-family: 'Noto Naskh Arabic', serif;
+    font-size: 15px;
+    direction: rtl;
+    text-align: right;
+    line-height: 2;
+  }
+
+  .label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-right: 6px;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: sans-serif;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .subject-header { padding: 15px 16px; }
+    .section { padding: 16px; }
+    header { padding: 32px 16px 28px; }
+    .stats { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-badge">চূড়ান্ত সাজেশন্স · আরবী বিষয়সমূহ</div>
+  <h1>আলিম কেন্দ্রীয় পরীক্ষা ২০২৬</h1>
+  <p>বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="বিষয় অনুসন্ধান করুন..." oninput="filterSubjects()">
+    <span class="search-icon"><i data-feather="search" width="16" height="16"></i></span>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><span class="stat-num">৯</span><span class="stat-label">বিষয়</span></div>
+  <div class="stat"><span class="stat-num">৫০+</span><span class="stat-label">অধ্যায়</span></div>
+  <div class="stat"><span class="stat-num">২০২৬</span><span class="stat-label">পরীক্ষা বর্ষ</span></div>
+</div>
+
+<main id="subjectList">
+
+  <!-- 1. QURAN -->
+  <div class="subject-group" onclick="toggle(this)">
+    <div class="subject-header">
+      <div class="subject-left">
+        <div class="subject-num">১</div>
+        <div>
+          <div class="subject-title">কুরআন মাজীদ</div>
+          <div class="subject-meta">সূরা অনুযায়ী আয়াত ও শানে নূযূল</div>
+        </div>
+      </div>
+      <div class="subject-right">
+        <span class="topic-count">৮ অধ্যায়</span>
+        <i data-feather="chevron-down" class="chevron" width="18" height="18"></i>
+      </div>
+    </div>
+    <div class="subject-body">
+      <div class="section">
+        <div class="section-title">নির্ধারিত সূরা ও আয়াত</div>
+        <ul class="item-list">
+          <li><span class="label">সূরা নিসা</span> আয়াত নং: ১-৩, ১১, ৪৩-৪৫, ৭৭-৮০, ১৩৬-১৩৯, ১৫৩-১৫৪</li>
+          <li><span class="label">সূরা আল মায়েদা</span> আয়াত নং: ১-২, ৬, ৯০-৯২</li>
+          <li><span class="label">সূরা আল আনআম</span> আয়াত নং: ১-৫, ৫১-৫৩, ৭৪-৭৯</li>
+          <li><span class="label">সূরা আরাফ</span> আয়াত নং: ১১-১৭, ১৯-২২, ৫৪-৫৬, ১৮৭-১৮৮</li>
+          <li><span class="label">সূরা আনফাল</span> আয়াত নং: ১-৭, ৬৫-৬৬, ৬৭-৬৯</li>
+          <li><span class="label">সূরা তাওবা</span> আয়াত নং: ১৭-১৯, ২৫-২৭, ৮১-৮৩, ১১৭-১১৮</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">শানে নূযূল</div>
+        <ul class="item-list">
+          <li class="arabic">بَيِّنْ سَبَبَ نُزُوْلِ سُوْرَةِ المائدة مَعَ ذِكْرِ وَجْهِ تَسْمِيَّتِهَا</li>
+          <li class="arabic">بَيِّنْ سَبَبَ نُزُوْلِ سُوْرَةِ الْأنْفَالِ مَعَ ذِكْرِ وَجْهِ تَسْمِيَّتِهَا</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. HADITH -->
+  <div class="subject-group" onclick="toggle(this)">
+    <div class="subject-header">
+      <div class="subject-left">
+        <div class="subject-num">২</div>
+        <div>
+          <div class="subject-title">হাদীস শরীফ ও উসূলুল হাদীস</div>
+          <div class="subject-meta">অধ্যায়ভিত্তিক হাদীস নং ও উসূল প্রশ্ন</div>
+        </div>
+      </div>
+      <div class="subject-right">
+        <span class="topic-count">২ ভাগ</span>
+        <i data-feather="chevron-down" class="chevron" width="18" height="18"></i>
+      </div>
+    </div>
+    <div class="subject-body">
+      <div class="section">
+        <div class="section-title">হাদীস শরীফ</div>
+        <ul class="item-list">
+          <li><span class="label">ঈমান অধ্যায়</span> হাদীস নং: ৩, ৬, ১২, ৪৯, ৫০, ১৩৫</li>
+          <li><span class="label">ইলম অধ্যায়</span> হাদীস নং: ১৯০, ১৯৫, ২২২, ২২৬, ২৩৯, ২৫৭</li>
+          <li><span class="label">ত্বহারাত অধ্যায়</span> হাদীস নং: ২৬১, ২৬৫, ২৬৯, ২৭০, ৩০৮, ৪১৫, ৪৫০</li>
+          <li><span class="label">সালাত অধ্যায়</span> হাদীস নং: ৫১৮, ৫২৩, ৫২৬, ৫২৭, ৫৯২, ৫৯৩, ৬০৬, ১০৪৯, ১৩৪২</li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="section-title">উসূলুল হাদীস</div>
+        <ul class="item-list">
+          <li class="arabic">ما مَعْنَي الْحَدِيْثِ لُغَةً وَاِصْطِلَاحًا؟ وَكَمْ قِسْمًا لِلْحَدِيْثِ بِاِعْتِبَارِ السَّنَدِ اِتِّصَالًا</li>
+          <li class="arabic">عَرِّفِ السَّنَدَ وَالْمَتَنَ – وَكَمْ قِسْمًا لِلْحَدِيْثِ بِاِعْتِبَارِ السَّنَدِ اِتِّصَالًا</li>
+          <li class="arabic">عَرِّفِ الْمُتَوَاتِرَ وَالْمَشْهُوْرَ وَالْعَزِيْزَ وَالْغَرِيْبَ</li>
+          <li class="arabic">عَرِّفِ الصَّحِيْحَ وَالْمَوْضُوْعَ وَالْمَتْرُوْكَ وَالشَّاذَ وَالْمَعْرُوْفَ وَالْمُنْكَرَ</li>
+          <li class="arabic">مَا الْفَرْقُ بَيْنَ الْحَدِيْثِ وَالسُّنَّةِ وَالْخَبْرِ وَالاَثَارِ؟</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. BALAGHAT -->
+  <div class="subject-group" onclick="toggle(this)">
+    <div class="subject-header">
+      <div class="subject-left">
+        <div class="subject-num">৩</div>
+        <div>
+          <div class="subject-title">ইলমুল বালাগাত</div>
+          <div class="subject-meta">আরবী অলংকারশাস্ত্র</div>
+        </div>
+      </div>
+      <div class="subject-right">
+        <span class="topic-count">৮ প্রশ্ন</span>
+        <i data-feather="chevron-down" class="chevron" width="18" height="18"></i>
+      </div>
+    </div>
+    <div class="subject-body">
+      <div class="section">
+        <div class="section-title">নির্ধারিত প্রশ্নসমূহ</div>
+        <ul class="item-list">
+          <li class="arabic">كَمْ قِسْمًا لِلْبَلَاغَةِ وَمَا هِىَ؟ بَيِّنْ اَقْسَامَهُ بِالْوَضَاحَةِ</li>
+          <li class="arabic">حَقِّقِ الْفَصَاحَةَ لُغَةً وَاِصْطِلاحًا مَعْ بَيَانِ اَقْسَامِهَا بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+          <li class="arabic">مَا هِىَ اَسْبَابُ التَّعْرِيْفِ بِإسْمِ الْإشَارَةِ؟ بَيِّنْ بِالْأمْثِلَةِ</li>
+          <li class="arabic">عَرِّفِ الذِّكْرَ- بَيِّنْ دَوَاعِيَ الذِّكْرِ وَالْحَذْفِ بِالتَّمْثِيْلِ مُوَضِّحًا</li>
+          <li class="arabic">مَا مَعْنَى الْخَبْرِ وَالْاِنْشَاءِ؟ وَمَا هِىَ اَقْسَامُ الْخَبْرِ بِاِعْتِبَارِ الْمُخَاطَبِ</li>
+          <li class="arabic">عَرِّفِ الْاَمْرَ لُغَةً وَاِصْطِلَاحًا؟ وَكَمْ صِيْغَةً لَهُ؟</li>
+          <li class="arabic">مَا مَعْنَي الْاِيجاز لُغَةً وَاِصْطِلَاحًا- ثُمَّ بَينْ اَقْسَامَ الْاِيجاز بِالتَّفْصِيْلِ</li>
+          <li class="arabic">عَرِّفِ الْقَصْرَ ثُمَّ بَينْ اَقْسَامَ الْقَصْرِ بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. MANTIQ -->
+  <div class="subject-group" onclick="toggle(this)">
+    <div class="subject-header">
+      <div class="subject-left">
+        <div class="subject-num">৪</div>
+        <div>
+          <div class="subject-title">ইলমুল মানতেক</div>
+          <div class="subject-meta">আরবী যুক্তিশাস্ত্র</div>
+        </div>
+      </div>
+      <div class="subject-right">
+        <span class="topic-count">৮ প্রশ্ন</span>
+        <i data-feather="chevron-down" class="chevron" width="18" height="18"></i>
+      </div>
+    </div>
+    <div class="subject-body">
+      <div class="section">
+        <div class="section-title">নির্ধারিত প্রশ্নসমূহ</div>
+        <ul class="item-list">
+          <li class="arabic">عَرِّفْ عِلْمَ الْمَنْطِقِ لُغَةً وَاِصْطِلَاحًا؟ مَوْضُوْعَهُ وَغَرْضَهُ وَغَايَتَهُ</li>
+          <li class="arabic">اَلدَّلَالَةُ اللَّفْظِيَّةُ مَا هِىَ؟ وَكَمْ قِسْمًا لَهَا؟ بَيِّنْ</li>
+          <li class="arabic">مَا هُوَ الْمُفْرَدِ؟ وَكَمْ قِسْمًا لَهُ؟ بِاِعْتِبَارِ الْمَعْنَى الْمُتَكَثَّرِ؟</li>
+          <li class="arabic">عَرِّفِ الْمَنْقُوْلَ- بَيِّنْ اَقْسَامَهُ بَيَانًا شَافِيًا</li>
+          <li class="arabic">اَلْقِيَاسُ مَا هُوَ؟ وَكَمْ قِسْمًا لَهُ بَيِّنْ بِالْوَضَاحَةِ</li>
+          <li class="arabic">اَلتَّنَاقُضُ مَا هُوَ؟ بَيِّنْ شَرَائِطَهُ مُفَصَّلًا وَمُمَثَّلًا</li>
+          <li class="arabic">كَمْ قِسْمًا لِشَرْطِيَّةِ الْمُنْفَصِلَةِ؟ بَيِّنْ بِالْاَمْثِلَةِ</li>
+          <li class="arabic">عَرِّفِ الْقَضِيَّةَ وَكَمْ قِسْمًا لَهَا؟ بَيِّنْ بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. FIQH 1 -->
+  <div class="subject-group" onclick="toggle(this)">
+    <div class="subject-header">
+      <div class="subject-left">
+        <div class="subject-num">৫</div>
+        <div>
+          <div class="subject-title">ফিকহ প্রথম পত্র</div>
+          <div class="subject-meta">শরহে বেকায়া</div>
+        </div>
+      </div>
+      <div class="subject-right">
+        <span class="topic-count">১৩ প্রশ্ন</span>
+        <i data-feather="chevron-down" class="chevron" width="18" height="18"></i>
+      </div>
+    </div>
+    <div class="subject-body">
+      <div class="section">
+        <div class="section-title">নির্ধারিত প্রশ্নসমূহ</div>
+        <ul class="item-list">
+          <li class="arabic">مَا مَعْنَي الْحَجِّ لُغَةً وَشَرْعًا؟ عَلَي مَنْ يَجِبُ الحجَّ وَعَلَي مَنْ لَا؟</li>
+          <li class="arabic">عَرِّفِ الْحَجَّ لُغَةً وَ شَرْعًا- ثُمَّ اُذْكُرْ فَرَائِضَ الْحَجِّ وَ وَاجِبَاتُهُ وَمَمْنُوْعَهِ</li>
+          <li class="arabic">عرف النِّكَاحُ- وَمَا حُكْمُهُ وَمَا شَرْطُهُ وَرُكْنُهُ- وَمَا الْفَرْقُ بَيْنَهُ وَبَيْنَ الْبَيْعِ</li>
+          <li class="arabic">عَرِّفِ الْمَهْرَ لُغَةً وَ شَرْعا- وَمَا هو مِقْدَارُ الْمَهْرِ؟</li>
+          <li class="arabic">مَا مَعْنَي الوَلِيِّ وَالْكُفُوِّ فِيْ النِّكَاحِ؟ هَلِ الْكُفُوُّ وَاجِبٌ اَمْ لَا؟</li>
+          <li class="arabic">مَا مَعْنَي الطلاق لُغَةً وَشَرْعًا؟ وَكَمْ قِسْمًا بِنِسْبةِ اَلْفَاظِ الْوُقُوْع وَالْحُكْمِ؟</li>
+          <li class="arabic">عرف الظِّهَارِ- وَمَا حُكْمُهُ؟ وَكَيْفَ يَثْبُتُ الظِّهَارُ؟ وَمَا هِيَ كَفَّارَةُ الظِّهَارِ؟</li>
+          <li class="arabic">عَرِّفِ الْغَنِيْمَةَ وَالْفَئَ وَالْجِزِيّةَ وَالْخَرَاجَ؟ ثُمَّ بَيِّنْ كَيْفِيَّةَ تَقْسِيْمِ الْغَنِيْمَةِ</li>
+          <li class="arabic">عَرِّفِ الصَّيْدَ- هَلِ الصَّيْدَ مَخْصُوْصٌ بِالْكَلْبِ اَمْ لَا؟</li>
+          <li class="arabic">عرف الذَّبِيْحَةَ؟ ثُمَّ بَيِّنْ تَقْسِيْمِ الذَّبِيْحَةِ وَصُوَرَتِهَا</li>
+          <li class="arabic">عرف اَلْاُضْحِيَّةُ؟ هَلْ تَصِحُّ الْاُضْحِيَّة بِالْعَمْيَاءِ وَالْعَرْجَاءِ وَالثَّوْلَاءِ؟</li>
+          <li class="arabic">عَرِّفِ الْهَدْيَ لُغَةً وَ شَرْعًا- بِاَيِّ حَيْوَانِ يَجُوْزُ الْهَدْيُ؟</li>
+          <li class="arabic">مَا مَعْنَي الْجِهَادِ لغة وشرعا؟ عَلَي مَنْ يَجِبُ الْجِهَادَ؟</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. FIQH 2 -->
+  <div class="subject-group" onclick="toggle(this)">
+    <div class="subject-header">
+      <div class="subject-left">
+        <div class="subject-num">৬</div>
+        <div>
+          <div class="subject-title">ফিকহ দ্বিতীয় পত্র</div>
+          <div class="subject-meta">নূরুল আনোয়ার — উসূলে ফিকহ</div>
+        </div>
+      </div>
+      <div class="subject-right">
+        <span class="topic-count">৯ প্রশ্ন</span>
+        <i data-feather="chevron-down" class="chevron" width="18" height="18"></i>
+      </div>
+    </div>
+    <div class="subject-body">
+      <div class="section">
+        <div class="section-title">নির্ধারিত প্রশ্নসমূহ</div>
+        <ul class="item-list">
+          <li class="arabic">مَا هو اُصُوْلُ الْشَّرْعِ؟ وَمَا الْفَرْقُ بَيْنَ اُصُوْلِ الْفِقْهِ وَاُصُوْلَ الْفِقْهِ؟</li>
+          <li class="arabic">مَا هو اُصُوْلُ الْشَّرْعِ؟ وَكَمْ هِىَ؟ هَلِ الْإسْتِحْسَانُ وَتَعَامُلِ النَّاسِ مِنْ اُصُوْلُ الشَّرْعِ؟</li>
+          <li class="arabic">عَرِّفِ الْعَامَّ مَعْ بَيَانِ اَقْسَامِهِ بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+          <li class="arabic">عَرِّفِ الْخَاصَّ مَعْ بَيَانِ اَقْسَامِهِ بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+          <li class="arabic">مَا هُوَ تَعْدِيْلُ الْأرْكَانِ؟ فَصِّلْ مَعْ بَيَانِ اِخْتِلَافِ الْأئِمَّةِ</li>
+          <li class="arabic">وَضِحْ مَسْأَلَةَ مُحَلِّلِيَّةِ الزَّوْجِ الثَّانِي بِحَدِيْثِ الْعُسَيْلَةِ مَعَ بَيَانِ اِخْتِلَافِ الْاَئِمَّةِ</li>
+          <li class="arabic">بَيِّنِ الْأمْرَ مَعْ فَوَائِدِ قُيُوْدِهِ- هَلْ فِعْلُ النَّبِيِّ صلعم مُوْجِبٌ عَلَي الْأمَّةِ؟</li>
+          <li class="arabic">عَرِّفِ الْاَدَاءَ وَالْقَضَاءَ- هَلْ يَجُوْزُ الْاَدَاءُ بِنِيَّةِ الْقَضَاءِ وَالْقَضَاءُ بِنِيَّةِ الْاَدَاءِ؟</li>
+          <li class="arabic">مَا مَعْنَي الصَّرِيْحِ وَالْكِنَايَةِ؟ وَمَا حُكْمُهُمَا؟ بَيِّنْ بِالتَّفْصِيْلِ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. FARAIZ -->
+  <div class="subject-group" onclick="toggle(this)">
+    <div class="subject-header">
+      <div class="subject-left">
+        <div class="subject-num">৭</div>
+        <div>
+          <div class="subject-title">ইলমুল ফারায়েয</div>
+          <div class="subject-meta">উত্তরাধিকার বিজ্ঞান ও মুনাসাখা</div>
+        </div>
+      </div>
+      <div class="subject-right">
+        <span class="topic-count">২ ভাগ</span>
+        <i data-feather="chevron-down" class="chevron" width="18" height="18"></i>
+      </div>
+    </div>
+    <div class="subject-body">
+      <div class="section">
+        <div class="section-title">ফারায়েয প্রশ্ন</div>
+        <ul class="item-list">
+          <li class="arabic">اَلْفُرُوْضُ الْمُقَدَّرَةُ فِىْ كِتَابِ اللهِ كَمْ هِىَ وَمَاهِىَ؟ اُذْكُرْ اَحْوَالَ بَنَاتِ الصُّلْبِ</li>
+          <li class="arabic">مَا مَعْنَى الْمَانِعُ لُغَةً وَاِصْطِلَاحًا؟ ثُمَّ بَيِّنْ اَقْسَامَ الْمَوَانِعِ لِلْاَرِثَةِ</li>
+          <li class="arabic">اُذْكُرْ اَحْوَالَ الاُخْتِ لِاَبْ بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+          <li class="arabic">اُذْكُرْ اَحْوَالَ بنات الابن بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+          <li class="arabic">مَا هُوَ الرَّدُّ؟ بَيِّنْ مَسَائِلَ الرَّدِّ بِالتَّفْصِيْلِ وَالتَّمْثِيْلِ</li>
+        </ul>
+      </div>
+      <div cla
